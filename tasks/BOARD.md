@@ -1,36 +1,33 @@
-# Avito Plus — канбан
+# Avito Plus — простой локальный MVP
 
-Папки — источник статуса. Все задачи реализации пока не начаты. Приоритет P0 означает gate MVP, не разрешение внешнего действия.
+Папка определяет статус. Реализация ещё не начата. Не нужно проходить старый server backlog подряд.
 
-## To do
+## To do — ближайшие два этапа
 
-| ID | Задача | Приоритет | Зависимости |
-|---|---|---|---|
-| [AP-001](to-do/AP-001-source-import.md) | Безопасный первый импорт и права публикации | P0 | Нет |
-| [AP-002](to-do/AP-002-dependencies-settings.md) | Зависимости и настройки | P0 | AP-001 |
-| [AP-003](to-do/AP-003-package-migration.md) | Перенос в src/avito_plus | P0 | AP-001, AP-002 |
-| [AP-004](to-do/AP-004-honest-source-states.md) | Реальные данные и честные ошибки | P0 | AP-003 |
-| [AP-005](to-do/AP-005-filters-cache-pagination.md) | Фильтры, валидация, cache и страницы | P0 | AP-003, AP-004 |
-| [AP-006](to-do/AP-006-portable-data-source.md) | Переносимый источник объявлений | P0 | AP-003; решение об источнике |
-| [AP-007](to-do/AP-007-optional-ai.md) | Необязательный AI и достоверные оценки | P1 | AP-002, AP-003 |
-| [AP-008](to-do/AP-008-web-safety-limits.md) | DOM, input и ограничения сервиса | P0 | AP-003, AP-004 |
-| [AP-009](to-do/AP-009-offline-acceptance.md) | Offline приёмка миграции | P0 | AP-004, AP-005, AP-006, AP-007, AP-008 |
-| [AP-010](to-do/AP-010-deployment-artifacts.md) | Конфигурации развёртывания | P1 | AP-002, AP-003; OS/runtime выбран |
-| [AP-011](to-do/AP-011-cloud-domain-decisions.md) | Выбор домена, VM и бюджета | P1 | Решение владельца |
-| [AP-012](to-do/AP-012-private-pilot.md) | Закрытый пилот Cloud.ru | P0 | AP-009, AP-010, AP-011 |
+| Задача | Результат |
+|---|---|
+| [AP-016](to-do/AP-016-local-launcher-lmstudio.md) | Setup + запуск/остановка одной кнопкой, LM Studio |
+| [AP-017](to-do/AP-017-local-search-quality.md) | Реальные объявления, несколько страниц, фото, лучшие среди найденных |
 
-Новые задачи по запросу пользователя:
+Перед кодом нужен доступ к авторским исходникам; если Claude видит только GitHub docs — передать чистые source файлы, не browser profiles.
 
-- [AP-013 — фотографии](to-do/AP-013-listing-photos.md), P1.
-- [AP-014 — соответствие товара, цены и ссылки](to-do/AP-014-listing-integrity.md), P0.
-- [AP-015 — ранжирование выгодных предложений](to-do/AP-015-best-deals-ranking.md), P1.
+### Справочные детали, включены в два этапа
 
-AP-005 дополнена реальным multi-page сбором, а не только разбиением текущих 7 карточек. Все четыре задачи остаются To do. Порядок: достоверность → несколько страниц → фото/объяснимый ranking.
+AP-001 source import; AP-002 dependencies; AP-004 honest source; AP-005 filters/pages; AP-006 local source; AP-007 LM Studio; AP-008 safe DOM/local limits; AP-009 offline acceptance; AP-013 photos; AP-014 identity/price/link; AP-015 ranking. Файлы остаются в to-do как детализация, не означают выполненную работу. После реализации закрывать только реально покрытые AC.
+
+### Отложено, не блокирует local MVP
+
+- [AP-003 package migration](to-do/AP-003-package-migration.md) — root layout достаточен.
+- [AP-010 deploy configs](to-do/AP-010-deployment-artifacts.md).
+- [AP-011 cloud/domain/budget](to-do/AP-011-cloud-domain-decisions.md).
+- [AP-012 Cloud.ru pilot](to-do/AP-012-private-pilot.md).
 
 ## In progress
 
-Нет активных задач.
+Нет активных задач. Публикация промпта не начинает работу Claude автоматически.
 
 ## Done
 
-- [AP-000 — подготовка структуры и плана](done/AP-000-repository-planning.md). Только документация.
+- [AP-000 — исходная документационная подготовка](done/AP-000-repository-planning.md). Не готовое приложение.
+
+[Готовый промпт](../docs/CLAUDE_LOCAL_MVP_PROMPT.md). Обновлять BOARD вместе с реальным статусом папок.

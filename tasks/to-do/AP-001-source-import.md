@@ -1,3 +1,7 @@
+> LOCAL MVP: детализация AP-016/AP-017, не обязательная отдельная очередь. AP-003 package migration и cloud/deploy требования ниже заменены локальным scope docs/LOCAL_MVP.md. Текущие AC: честный localhost инструмент, без enterprise инфраструктуры.
+
+Для работы с авторскими файлами локально не требуется ждать public source import/выбора LICENSE. Если Claude имеет файлы — реализовать local MVP; публикация кода отдельным allowlist действием.
+
 # AP-001 — Безопасный первый импорт и права публикации
 
 Priority: P0. Owner: UNASSIGNED. Blocked: зависимости/входы проверяются перед стартом.

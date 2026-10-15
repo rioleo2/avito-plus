@@ -1,3 +1,5 @@
+> LOCAL MVP: детализация AP-016/AP-017, не обязательная отдельная очередь. AP-003 package migration и cloud/deploy требования ниже заменены локальным scope docs/LOCAL_MVP.md. Текущие AC: честный localhost инструмент, без enterprise инфраструктуры.
+
 # AP-006 — Переносимый источник объявлений
 
 Priority: P0. Owner: UNASSIGNED. Blocked: зависимости/входы проверяются перед стартом.

@@ -44,4 +44,5 @@ dist/
 # Local repository preparation helper
 prepare_repository.py
 publish_repository.py
+simplify_local_plan.py
 .publication/
