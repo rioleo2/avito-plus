@@ -1,0 +1,259 @@
+{
+  "date": "2026-10-15",
+  "scope": "documentation/scaffold/tasks only; no application source/browser profiles/captures",
+  "runtime": "NOT_RUN",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "bytes": 331,
+      "sha256": "2aed19b7f28fccb7fc66f21730efa91f601708d850d29556e8575dceb549a915",
+      "git_blob_sha": "e8835eddfd01ef5de24844b3190e71f26bf38ffc"
+    },
+    {
+      "path": ".env.example",
+      "bytes": 472,
+      "sha256": "f70f1c1a6fdac8258b73e28019499e237ce49753b6d740af528acf99586dd060",
+      "git_blob_sha": "9f1397fd89d4c2a45a297ece84bc093e5cdecce0"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 670,
+      "sha256": "12e63cd76f2fcaeb3477cf4c34df3b3d2e17fd817306534f76d03224784ea4e3",
+      "git_blob_sha": "5fb994f640b446fec4f76566956a001bf697e725"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2740,
+      "sha256": "64793aa7dcd9d660792180c87da4261d8db69414c0ada0a91ad78af8b7299e38",
+      "git_blob_sha": "7a06bb43751041c93c5c500ee1a6e4c18b12aa32"
+    },
+    {
+      "path": "docs/BASELINE.md",
+      "bytes": 4585,
+      "sha256": "e43b8d9544fe92d4517a1f1977f1a56480cd27750f0569155133023fda6411db",
+      "git_blob_sha": "0ecf66ce0c0a59156978e723c4414fcfc0ecf2d8"
+    },
+    {
+      "path": "docs/CLAUDE_LOCAL_MVP_PROMPT.md",
+      "bytes": 4650,
+      "sha256": "dee3ac743e29e9272a038608037bfec594140245e216b9e4270fee1fb66921ec",
+      "git_blob_sha": "7a0d09c0f1f1545235670b8a7bbf9d3105dc0f04"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "bytes": 1730,
+      "sha256": "b2e163fcd7bd3232658716259c5422b7df6e83ff1f0a38b32e91da842ce795ff",
+      "git_blob_sha": "e770eea6d7a1534bcedd90d6bc071bf46d1d0d22"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "bytes": 9008,
+      "sha256": "ce3ab2b6676ab70abddb6d5b6f79ea5e078394b9c3498e2ac14f023da9e5de24",
+      "git_blob_sha": "c797c61d44560994fc3bdd59b6f337734727b5fe"
+    },
+    {
+      "path": "docs/LAUNCH_BLOCKERS.md",
+      "bytes": 2538,
+      "sha256": "144f3e57b0947f437d37834a13a4e140902313d0b1dc65d492a7a49f9a48a112",
+      "git_blob_sha": "24607f8a05e76b8eb58535b071d4f21033a38b1d"
+    },
+    {
+      "path": "docs/LOCAL_MVP.md",
+      "bytes": 5661,
+      "sha256": "be5539ea54d49b62f293e07ea64e37e60d3542b149b07a04c6cd6852f19807a3",
+      "git_blob_sha": "db988d573899240895e0bb8c7639ecb5ec5565d2"
+    },
+    {
+      "path": "docs/MIGRATION.md",
+      "bytes": 6008,
+      "sha256": "34cf0729cbdf2191dca6018aedee4347d6f4d94401362bdccaeabb5b386446db",
+      "git_blob_sha": "220476ca7a329281a171896a205d932ad27be704"
+    },
+    {
+      "path": "docs/SOURCE_MANIFEST.json",
+      "bytes": 2713,
+      "sha256": "f830bf9602a76454d391ea282afcc0cde535f898ae8a0ebd50bad5ef637fd41e",
+      "git_blob_sha": "13d83f8c7d8e975fdc745f9641e2faa44f3cd3fb"
+    },
+    {
+      "path": "docs/STRUCTURE.md",
+      "bytes": 2987,
+      "sha256": "318a2b139eb761ecdc958afba376693efc11448a2030b6c6ff29bd33f07a6574",
+      "git_blob_sha": "9f42b769031aa3873b7eba0d32de742bad4d1199"
+    },
+    {
+      "path": "infrastructure/README.md",
+      "bytes": 320,
+      "sha256": "ea2f48fba3bfe3dfa7e9050040c11a5d2d0829f6a6481b1976a5ef56dadc6924",
+      "git_blob_sha": "0d457b15ee2bf8d507e2b92ddc05a17798d5ec3f"
+    },
+    {
+      "path": "infrastructure/templates/README.md",
+      "bytes": 302,
+      "sha256": "f1c65cae192f5af52ee6a6598b86e048729dd161ebf46a211f63f49d9d0e35ca",
+      "git_blob_sha": "b6995f940b6a1193990a44eb1f20a7ae7c735b0b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6084,
+      "sha256": "67729fa0fdc702bc0593f6d91689373319ab34886b80c60babeb64cc9aa57108",
+      "git_blob_sha": "efe608a7d96e6cd698aab7fc8b3ab7736fe8fa69"
+    },
+    {
+      "path": "requirements.in",
+      "bytes": 192,
+      "sha256": "ab94123b10520f4671965f63a51ea794a1bf4e126fb35fed635a183616f2337a",
+      "git_blob_sha": "5fd30bedc02beb4b165bbc8bca7d20733d71de57"
+    },
+    {
+      "path": "src/avito_plus/README.md",
+      "bytes": 301,
+      "sha256": "65e537d6b7c2f63fd1a2187024ad617056b964398dfaa2ca4e61e57af76b3111",
+      "git_blob_sha": "668742f2449d904ba9765c1344c9cce25c1c7bbd"
+    },
+    {
+      "path": "tasks/BOARD.md",
+      "bytes": 2250,
+      "sha256": "e06dc11fe0b8cb472a7a7dc6ea454011c07fe9325137460ad22a987a9bebcb7a",
+      "git_blob_sha": "f4c248cf614a5a24f9b4d0a5a21e8f2c6753f0e0"
+    },
+    {
+      "path": "tasks/done/AP-000-repository-planning.md",
+      "bytes": 697,
+      "sha256": "050f110015577287c99db97a7772d8f81d7d1d5ba29945d538963825192bbd32",
+      "git_blob_sha": "097e6e1cd0e5d3695fafc90ea88c629b5b98bbcc"
+    },
+    {
+      "path": "tasks/in-progress/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tasks/README.md",
+      "bytes": 1241,
+      "sha256": "73a01cfe1407de701c8407e2c7e5fc7a79f2cc47392758604e0e720a336dd288",
+      "git_blob_sha": "9f1693487d6fa664143588e61cd94ee3c17cd38b"
+    },
+    {
+      "path": "tasks/TEMPLATE.md",
+      "bytes": 670,
+      "sha256": "c8393f9ea7c7736d692539acf04d8b2bc34c3aabd01c88ba1a0b35abac8c8ff2",
+      "git_blob_sha": "4d8ab20518388b9a9bd471fa3a086ce8f1bd91ec"
+    },
+    {
+      "path": "tasks/to-do/AP-001-source-import.md",
+      "bytes": 1551,
+      "sha256": "23770742ddee367fb58b381c7f088576b8ff81477529875255f3e79376a64b24",
+      "git_blob_sha": "1877b7aad291de6429991da79bf658d312db81d6"
+    },
+    {
+      "path": "tasks/to-do/AP-002-dependencies-settings.md",
+      "bytes": 1167,
+      "sha256": "670ab7b7e869cbc7525c55b90a7bef85a760de449f7d20161dd527c63edc2091",
+      "git_blob_sha": "517c3c2615db32fcbeaf9dd58048ee3f04ebd0c7"
+    },
+    {
+      "path": "tasks/to-do/AP-003-package-migration.md",
+      "bytes": 992,
+      "sha256": "5f0c2b082a2c9ac535575e46297c0f99a1851e5ee65dd3e02bdfef41997b9c49",
+      "git_blob_sha": "de8679a04f7488741236f5f0a6026d4cdaf49f2c"
+    },
+    {
+      "path": "tasks/to-do/AP-004-honest-source-states.md",
+      "bytes": 1154,
+      "sha256": "3da2e2741a1d1b6e1b714e9cb0ee649f34a646d7e6255f78ec6ac914cf9007a3",
+      "git_blob_sha": "23e62556a09e94eddfa882d693907f14b89291f0"
+    },
+    {
+      "path": "tasks/to-do/AP-005-filters-cache-pagination.md",
+      "bytes": 2463,
+      "sha256": "973c013a3ed8056400ca64bcdd59ede3690b22cea7cd75cc6847c0969b8c64f5",
+      "git_blob_sha": "121b2972f4a9b24fb719975e435c229b5ac7e76c"
+    },
+    {
+      "path": "tasks/to-do/AP-006-portable-data-source.md",
+      "bytes": 1222,
+      "sha256": "8a6a5d240d186f8f610f4e822fdbd6685583a29a01bb96e2362d88094e3d5339",
+      "git_blob_sha": "b02990c81bea485611dcea6111ef1acda4474df2"
+    },
+    {
+      "path": "tasks/to-do/AP-007-optional-ai.md",
+      "bytes": 1235,
+      "sha256": "8734a40de178d0ebd237712781f399f2e6e6ecab6b6d150984504cffcaefae55",
+      "git_blob_sha": "75466efd13a552f2b646370926092c6ddf31b72a"
+    },
+    {
+      "path": "tasks/to-do/AP-008-web-safety-limits.md",
+      "bytes": 1234,
+      "sha256": "8ce13409a7b71bf78084bc180e60139944528976ae36a72243f00e339ef01922",
+      "git_blob_sha": "66486e6afaf9406e35f436fa08fbe7caeedd8cdc"
+    },
+    {
+      "path": "tasks/to-do/AP-009-offline-acceptance.md",
+      "bytes": 1217,
+      "sha256": "24361e02895e655515ee3b236d62d0096ef35b71f2939df09a8d592941b0e447",
+      "git_blob_sha": "2cc5ab18c1233fba2f2733c6463e4a577f1a675a"
+    },
+    {
+      "path": "tasks/to-do/AP-010-deployment-artifacts.md",
+      "bytes": 1011,
+      "sha256": "098dc52d0d48f869b8f8e4c4c06e1697b6882549d475891fa98a96f1335f5f61",
+      "git_blob_sha": "f703e8016a930794184a89b54d141d288d300e2d"
+    },
+    {
+      "path": "tasks/to-do/AP-011-cloud-domain-decisions.md",
+      "bytes": 1082,
+      "sha256": "9d78e69a614b215315e8cfba52bd466c3d6be2225627f656510535568a6b488a",
+      "git_blob_sha": "e1c35138fd948c9782828ba05b4b38bf5272fea3"
+    },
+    {
+      "path": "tasks/to-do/AP-012-private-pilot.md",
+      "bytes": 1184,
+      "sha256": "3b0227cd4b3b8e54b4bed84c52799e9c3d83569a24069a8f8836bed7b291591e",
+      "git_blob_sha": "d83d6270f976fd73d262886b95b43ab8632dae3e"
+    },
+    {
+      "path": "tasks/to-do/AP-013-listing-photos.md",
+      "bytes": 2697,
+      "sha256": "e5cf607266f1ffb703b7c214a333688406dfceda1b82bff60712f9c22e5f0c3a",
+      "git_blob_sha": "350911821236edd98ec7542d77f88540c7a70f73"
+    },
+    {
+      "path": "tasks/to-do/AP-014-listing-integrity.md",
+      "bytes": 3582,
+      "sha256": "be47f476858b4cfdf277c9d94dda26a09d4d752e6e0f5a0eb4f1ba63d107fec4",
+      "git_blob_sha": "d98afee052b623df5b03c2ab1bdbe18a880c1175"
+    },
+    {
+      "path": "tasks/to-do/AP-015-best-deals-ranking.md",
+      "bytes": 3896,
+      "sha256": "33c6a8255e7ab7de9ddb2e339a149b64e1ed6514f5704aa06524e4a704c2c47a",
+      "git_blob_sha": "541f4fe1779ada3c8a237c26e056e4d5351ba753"
+    },
+    {
+      "path": "tasks/to-do/AP-016-local-launcher-lmstudio.md",
+      "bytes": 1243,
+      "sha256": "72e8c3e69c97b984315438167357ffa459313e0c0dbfbc5d3b83b31eda94cf3d",
+      "git_blob_sha": "9d481938c4d26f0e6495df508167471884bd8bd1"
+    },
+    {
+      "path": "tasks/to-do/AP-017-local-search-quality.md",
+      "bytes": 1268,
+      "sha256": "771edde88be5b3e28e632922a2bbcf2cf9197902502c95f96db154c6663f5d7b",
+      "git_blob_sha": "c3dac1523df036d2eefcb8b14018d8c1e5678147"
+    },
+    {
+      "path": "tests/README.md",
+      "bytes": 398,
+      "sha256": "d012ad13a9a556d3828886c22f28c8abc3af511f2387475bcadba7e540fda0e0",
+      "git_blob_sha": "4e15dbdd26d20d7158f8260aa8ce24076ccee77d"
+    },
+    {
+      "path": "tools/manual/README.md",
+      "bytes": 488,
+      "sha256": "7c52e8857b2ae4615b66fd7d2c5cc2084627b6f9d2f522de78c6b38e1dbd91eb",
+      "git_blob_sha": "b728bf837c80a182fa761a76bbc5e60486af22c1"
+    }
+  ]
+}
