@@ -1,0 +1,235 @@
+{
+  "date": "2026-10-15",
+  "scope": "documentation/scaffold/tasks only; no application source/browser profiles/captures",
+  "runtime": "NOT_RUN",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "bytes": 331,
+      "sha256": "2aed19b7f28fccb7fc66f21730efa91f601708d850d29556e8575dceb549a915",
+      "git_blob_sha": "e8835eddfd01ef5de24844b3190e71f26bf38ffc"
+    },
+    {
+      "path": ".env.example",
+      "bytes": 472,
+      "sha256": "f70f1c1a6fdac8258b73e28019499e237ce49753b6d740af528acf99586dd060",
+      "git_blob_sha": "9f1397fd89d4c2a45a297ece84bc093e5cdecce0"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 647,
+      "sha256": "9d3f7660abd19100db7fa8a4aebe99692c50ccdea668c1b2ede0fbe9b8a8b14d",
+      "git_blob_sha": "76b350621288f0f8fc959bf787c4502ddf8b6ef8"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2605,
+      "sha256": "e99bfde05e404556c6100b6192b8c76ee06e7399930d0954a207fe2cc277c60e",
+      "git_blob_sha": "7dcd68dc63029f8ea143353f7116917ab41ecdde"
+    },
+    {
+      "path": "docs/BASELINE.md",
+      "bytes": 4227,
+      "sha256": "66b0b4aa108af0ec98d929370535fffdfdd638ae854bcfde3a369379bb0ffba8",
+      "git_blob_sha": "01e3a9f604b7e84951a1d12e2db3e8630c3d1e6c"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "bytes": 1825,
+      "sha256": "420c3f711fe576ff06003e9dedd7e82d6bb90b8ea5834f110651eb1a94347c17",
+      "git_blob_sha": "ce461bb6d58038a74bd43a20895b7cb445c0f237"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "bytes": 8650,
+      "sha256": "7e2cad2b6cba280759a7d926e96257a053b1107c03d14aed324d251bfd83b25e",
+      "git_blob_sha": "63e76cc08bad0d11be0f1f73724450a39b7a3a85"
+    },
+    {
+      "path": "docs/LAUNCH_BLOCKERS.md",
+      "bytes": 6829,
+      "sha256": "f54e6d38a27469f858031d5f21644dd978d110e8e462c0735fe56643dae35003",
+      "git_blob_sha": "a02c53543293653cd31d5a2db16caada86a3ea08"
+    },
+    {
+      "path": "docs/MIGRATION.md",
+      "bytes": 5650,
+      "sha256": "123fcc9a853d38e30e5f152af2fa0d32aad21506e4235b06067888e02970ed0f",
+      "git_blob_sha": "52cafc290939770e8387dd492a692564ea4a87bb"
+    },
+    {
+      "path": "docs/SOURCE_MANIFEST.json",
+      "bytes": 2713,
+      "sha256": "f830bf9602a76454d391ea282afcc0cde535f898ae8a0ebd50bad5ef637fd41e",
+      "git_blob_sha": "13d83f8c7d8e975fdc745f9641e2faa44f3cd3fb"
+    },
+    {
+      "path": "docs/STRUCTURE.md",
+      "bytes": 2629,
+      "sha256": "2df391a7a7508aa38604ed7e34799eebef55d616fa28a629d607bae24473bd66",
+      "git_blob_sha": "3b51f1ff35362b1f69578114577c40b28606b8d0"
+    },
+    {
+      "path": "infrastructure/README.md",
+      "bytes": 437,
+      "sha256": "168250f3d33210447ff8a79be8cca580e63ef6ccc23149571d54e85fe2e37b74",
+      "git_blob_sha": "cd7e6f7a14171208603f889ae7d2cd94b3c9b0cd"
+    },
+    {
+      "path": "infrastructure/templates/README.md",
+      "bytes": 302,
+      "sha256": "f1c65cae192f5af52ee6a6598b86e048729dd161ebf46a211f63f49d9d0e35ca",
+      "git_blob_sha": "b6995f940b6a1193990a44eb1f20a7ae7c735b0b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12114,
+      "sha256": "7ec355def4ba0116f9787fcd09cddae4d0d6d7720f54e5881113f7a37801c186",
+      "git_blob_sha": "5864b8647bad6d4cf98591280ee5195b1b96937f"
+    },
+    {
+      "path": "requirements.in",
+      "bytes": 192,
+      "sha256": "ab94123b10520f4671965f63a51ea794a1bf4e126fb35fed635a183616f2337a",
+      "git_blob_sha": "5fd30bedc02beb4b165bbc8bca7d20733d71de57"
+    },
+    {
+      "path": "src/avito_plus/README.md",
+      "bytes": 364,
+      "sha256": "b42c0c3d6006d01df5ec95e7430510590a5d9002cf0dc552f1f46304ec7c2eb3",
+      "git_blob_sha": "b0dcd201dde0514a161957d6109c362459ddc46b"
+    },
+    {
+      "path": "tasks/BOARD.md",
+      "bytes": 2877,
+      "sha256": "8700c87e27ba86c4b838997a7c53669f7661cdff9884b3cc61a11b0f74246a69",
+      "git_blob_sha": "8b6d59cdf9257012945fbd522ed777af2322442f"
+    },
+    {
+      "path": "tasks/done/AP-000-repository-planning.md",
+      "bytes": 697,
+      "sha256": "050f110015577287c99db97a7772d8f81d7d1d5ba29945d538963825192bbd32",
+      "git_blob_sha": "097e6e1cd0e5d3695fafc90ea88c629b5b98bbcc"
+    },
+    {
+      "path": "tasks/in-progress/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tasks/README.md",
+      "bytes": 1241,
+      "sha256": "73a01cfe1407de701c8407e2c7e5fc7a79f2cc47392758604e0e720a336dd288",
+      "git_blob_sha": "9f1693487d6fa664143588e61cd94ee3c17cd38b"
+    },
+    {
+      "path": "tasks/TEMPLATE.md",
+      "bytes": 670,
+      "sha256": "c8393f9ea7c7736d692539acf04d8b2bc34c3aabd01c88ba1a0b35abac8c8ff2",
+      "git_blob_sha": "4d8ab20518388b9a9bd471fa3a086ce8f1bd91ec"
+    },
+    {
+      "path": "tasks/to-do/AP-001-source-import.md",
+      "bytes": 878,
+      "sha256": "048bd5d91674cb018228b61d22b1fc9197cef80e00e45014ef67de4b1e87a192",
+      "git_blob_sha": "a13d29dca61b2c5f498faef62dca1a4241b50835"
+    },
+    {
+      "path": "tasks/to-do/AP-002-dependencies-settings.md",
+      "bytes": 804,
+      "sha256": "b3806a06b7968b80876636cb5ac8e21d4e888dd974724322c57d5feb5442d92a",
+      "git_blob_sha": "4cc44a80bbf363ee242d633fe4241377f06e1ff1"
+    },
+    {
+      "path": "tasks/to-do/AP-003-package-migration.md",
+      "bytes": 749,
+      "sha256": "fd2cb8535e095deb6cc9ddc8d8ed8fc7d0eb450caef754868d7e3f9bcc05ef3a",
+      "git_blob_sha": "c24ab46150efbad93bd6fb9e237cd71b49a472a6"
+    },
+    {
+      "path": "tasks/to-do/AP-004-honest-source-states.md",
+      "bytes": 791,
+      "sha256": "5bab9ce43592fedca71e74037795c468202e1cbf6fd7d2ba25fc3147903e24c1",
+      "git_blob_sha": "27cf06afcd3056af1966711b8a23f0ac1c4d5b83"
+    },
+    {
+      "path": "tasks/to-do/AP-005-filters-cache-pagination.md",
+      "bytes": 2100,
+      "sha256": "10e4f8e08febe84d8cb0a3a88c25e796988ee37b51f20c0ec100bbc2bd450625",
+      "git_blob_sha": "e0a871c8f3049708a4b058dc16ae80cce434c7db"
+    },
+    {
+      "path": "tasks/to-do/AP-006-portable-data-source.md",
+      "bytes": 859,
+      "sha256": "9296716a8f97e699a11b4c2cdb0f8860f745552633f4694b09edb4fe5b9ab2da",
+      "git_blob_sha": "bbb54a17c17b67778007d75197d857cfb32200bc"
+    },
+    {
+      "path": "tasks/to-do/AP-007-optional-ai.md",
+      "bytes": 872,
+      "sha256": "97978b7a09d8539dae477c66b54b5bcadc67388929b89b66171919e955fdc31e",
+      "git_blob_sha": "d6d66daea6c8b0bd145f26d3a430d66ec7cdaa13"
+    },
+    {
+      "path": "tasks/to-do/AP-008-web-safety-limits.md",
+      "bytes": 871,
+      "sha256": "d4fefbc4bf3c9fcd8822aae689549d0fbf5cea56f9e40b9725d6377060eebd77",
+      "git_blob_sha": "a169c76cf5436b6f9ae5a2dca6cbdfcced10ecfd"
+    },
+    {
+      "path": "tasks/to-do/AP-009-offline-acceptance.md",
+      "bytes": 854,
+      "sha256": "386dcf70d0b526fc80ca503cef08fac2b023f906be0901c9317e3c2d1013c690",
+      "git_blob_sha": "a07117e3532c8878cb67804d06a1195616d04781"
+    },
+    {
+      "path": "tasks/to-do/AP-010-deployment-artifacts.md",
+      "bytes": 768,
+      "sha256": "bad386b071005bfe3bc9ac12abc5e7604c986c1537866f744fec07c05cb29c67",
+      "git_blob_sha": "940b097a15eb6565818b96f6c63d8b8bdca755c4"
+    },
+    {
+      "path": "tasks/to-do/AP-011-cloud-domain-decisions.md",
+      "bytes": 839,
+      "sha256": "824ebcf8c8354b6d379125195e4e331105e70f38d02bae5443da2e2c1809ea4e",
+      "git_blob_sha": "c0487d9cc32c2bfc3d84cf1a76b3f779e5db94a4"
+    },
+    {
+      "path": "tasks/to-do/AP-012-private-pilot.md",
+      "bytes": 941,
+      "sha256": "0957ee3b0641636070cbcb12747bed483422da3faa83c82eb0338090a087a068",
+      "git_blob_sha": "f4d90cfaa274171510129a3a75a502f8f97863e4"
+    },
+    {
+      "path": "tasks/to-do/AP-013-listing-photos.md",
+      "bytes": 2334,
+      "sha256": "785afac6c816bc4d088e4e5cae08a7e2a89355f05292a681b0048aa16c63108a",
+      "git_blob_sha": "dc9f8649dbba4e80396eea9391f7c886be49991d"
+    },
+    {
+      "path": "tasks/to-do/AP-014-listing-integrity.md",
+      "bytes": 3219,
+      "sha256": "e0b3d4bca047ad53918a3ab57d334597029a2729c73b43642c81f4ea79748f77",
+      "git_blob_sha": "ea4146c890645aaab65fe475bf73fe1ce103b2b6"
+    },
+    {
+      "path": "tasks/to-do/AP-015-best-deals-ranking.md",
+      "bytes": 3533,
+      "sha256": "d8ce80c74e49e47ca39ad23ef2d860a755b5bcc16664e54de92bb1429fd73139",
+      "git_blob_sha": "97048f5e0815d3430c8e9499a2bf5c20b1ee2ddd"
+    },
+    {
+      "path": "tests/README.md",
+      "bytes": 398,
+      "sha256": "d012ad13a9a556d3828886c22f28c8abc3af511f2387475bcadba7e540fda0e0",
+      "git_blob_sha": "4e15dbdd26d20d7158f8260aa8ce24076ccee77d"
+    },
+    {
+      "path": "tools/manual/README.md",
+      "bytes": 488,
+      "sha256": "7c52e8857b2ae4615b66fd7d2c5cc2084627b6f9d2f522de78c6b38e1dbd91eb",
+      "git_blob_sha": "b728bf837c80a182fa761a76bbc5e60486af22c1"
+    }
+  ]
+}

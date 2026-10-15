@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-15",
+  "scope": "Source-only inventory; excludes profiles, cookies, history and captures",
+  "execution": "STATIC_READ_ONLY; application/tests NOT_RUN",
+  "files": [
+    {
+      "path": "analyzer.py",
+      "bytes": 4939,
+      "sha256": "4d4cabcfdeea92eb4e2f90b8548440894ce331381ff1769eb3316f21059f7577"
+    },
+    {
+      "path": "app.py",
+      "bytes": 2562,
+      "sha256": "e8877aa07ff2574814a414c15f77558beb44e249dafc71f898b1df6f65f15868"
+    },
+    {
+      "path": "market.py",
+      "bytes": 4254,
+      "sha256": "416f98825bfec5b74705bb53773f683c7020093a9457ef4d956531c3cae76ad7"
+    },
+    {
+      "path": "models.py",
+      "bytes": 3822,
+      "sha256": "1aa4ec4a056a53b86d1a149636315686592052fdf3dacef17eaeb18559739fee"
+    },
+    {
+      "path": "scraper.py",
+      "bytes": 22627,
+      "sha256": "62a17db533e30a7668995b6bb2f1366ffc21137c2c6e1bb82fdbba4b3f9533a5"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 8557,
+      "sha256": "5d151561565a8d444740b655a11adb3e09504b2b9ef881b213b1d9985ac13e34"
+    },
+    {
+      "path": "templates/index.html",
+      "bytes": 12655,
+      "sha256": "ddb5a07dcf65c8ccec7b040e79453e69ec53bd8cae674d44ec1e9285f2b69026"
+    },
+    {
+      "path": "test_ai.py",
+      "bytes": 2063,
+      "sha256": "e9cb7cc3dc8dc00e4a477d484246ffa15ee987f698dc1fdecde7040d955b9978"
+    },
+    {
+      "path": "test_api.py",
+      "bytes": 956,
+      "sha256": "e61f96ab26aaa3bb9ecfa6f841f4aea0c72a7e4d4856846fde15873733060d96"
+    },
+    {
+      "path": "test_curl.py",
+      "bytes": 1617,
+      "sha256": "0f90fcf1359a4cd120c8f9a3ed656538102372c6fcfe515910eba1b991cee053"
+    },
+    {
+      "path": "test_edge.py",
+      "bytes": 1664,
+      "sha256": "61b6437f4bc9f3dc5e67047046a2414dceaf8ebcff0954d1828e53d92624ba3c"
+    },
+    {
+      "path": "test_endpoints.py",
+      "bytes": 1016,
+      "sha256": "0717437973a7957445bf19dee3d8d52a8b7437c2b42373efd1d42826527d684a"
+    },
+    {
+      "path": "test_real_browser.py",
+      "bytes": 2120,
+      "sha256": "f4a0cba76d26b8a48a03d401f157ad53261d80778a7c3096b38d369a7c410893"
+    },
+    {
+      "path": "test_scrape_live.py",
+      "bytes": 2938,
+      "sha256": "17a74b115de2e2304addf0d7927db8382a4abb6ce32a9d6bfa345d81dc228b9b"
+    },
+    {
+      "path": "test_selectors.py",
+      "bytes": 1591,
+      "sha256": "0a1ffef20eda7fa2e5acbda1755ddc4629dfca5dbd86cfbfefcd38b84c47f7d8"
+    },
+    {
+      "path": "test_stealth.py",
+      "bytes": 2296,
+      "sha256": "ff9b4e49ca20b2f1f7f4437dcfaabd051d022f2014e18f183ef4af5a7d3e8772"
+    },
+    {
+      "path": "test_yandex.py",
+      "bytes": 1243,
+      "sha256": "845e364dfb5a2b7bd2bdc535854add84d50786444398f2b5a8f4f727b816f293"
+    }
+  ]
+}

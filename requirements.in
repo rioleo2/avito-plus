@@ -1,0 +1,8 @@
+# Candidate direct runtime dependencies inferred from source. NOT installed/tested.
+# Pin compatible versions + transitive lock under AP-002.
+fastapi
+uvicorn
+jinja2
+pydantic
+playwright
+openai

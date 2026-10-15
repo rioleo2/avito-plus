@@ -1,0 +1,47 @@
+# Private configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+# User browser sessions: NEVER publish
+real_browser_profile/
+firefox_profile/
+**/browser_profiles/
+**/profiles/
+*cookies*
+user_avito_history.txt
+*history*.txt
+# Runtime and captures
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+data/
+logs/
+captures/
+artifacts/
+*.log
+*.db
+*.db-*
+*.sqlite*
+api9.json
+avito_page.html
+page_429.html
+avito_429.png
+card_debug.txt
+soup_debug.txt
+parsed_result.txt
+build/
+dist/
+*.egg-info/
+# Local repository preparation helper
+prepare_repository.py
+publish_repository.py
+.publication/

@@ -1,0 +1,18 @@
+# AP-012 — Закрытый пилот Cloud.ru
+
+Priority: P0. Owner: UNASSIGNED. Blocked: зависимости/входы проверяются перед стартом.
+
+## Цель
+После отдельного разрешения выполнить выбранное развёртывание и проверить реальный домен/источник.
+
+## Зависимости
+AP-009, AP-010, AP-011
+
+## Scope
+Конкретные VM/DNS/credentials/budget/rollback согласованы; начать с ограниченного доступа.
+
+## Приёмка
+HTTPS/UI/health/source/error/limits/restart/rollback реально проверены; AI optional; blocked source не называется работающим сервисом; public access отдельное решение.
+
+## Результат
+NOT_STARTED. Код/проверки/публикация/deploy не выполнялись.
