@@ -1,0 +1,25 @@
+# --- Личные данные: НЕ коммитить ---
+# Профили браузеров (cookies, логины, история)
+avito_analyzer/firefox_profile/
+avito_analyzer/real_browser_profile/
+# История просмотров пользователя и отладочные дампы страниц Авито
+avito_analyzer/user_avito_history.txt
+avito_analyzer/card_debug.txt
+avito_analyzer/soup_debug.txt
+avito_analyzer/parsed_result.txt
+avito_analyzer/avito_page.html
+avito_analyzer/page_429.html
+avito_analyzer/avito_429.png
+avito_analyzer/api9.json
+# Локальные настройки (путь к LM Studio на вашей машине)
+avito_analyzer/lmstudio_path.txt
+# Кэш выдачи
+avito_analyzer/.cache/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.sqlite
+*.sqlite-*
