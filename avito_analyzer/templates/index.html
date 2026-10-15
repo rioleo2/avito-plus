@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анализ рынка Авито</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fbfbfd;
+      color: #1d1d1f;
+    }
+    .apple-card {
+      background: #ffffff;
+      border: 1px solid #e5e5ea;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .segmented-btn.active {
+      background: #000000;
+      color: #ffffff;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+  <!-- Минималистичная шапка -->
+  <header class="border-b border-neutral-200/80 bg-white/80 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="/" title="На главную" class="font-semibold text-base text-neutral-900 tracking-tight hover:text-neutral-600 transition cursor-pointer">
+        Анализ Авито
+      </a>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- Блок ввода и фильтров -->
+    <div class="apple-card rounded-2xl p-5 sm:p-6 space-y-4">
+      <form id="searchForm" onsubmit="event.preventDefault(); startAnalysis();" class="space-y-4">
+        
+        <!-- Чистая строка поиска -->
+        <div class="flex gap-2">
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400"></i>
+            <input 
+              type="text" 
+              id="query" 
+              name="query" 
+              required
+              value="" 
+              placeholder="Поиск по объявлениям (например: PS5, iPhone 15, MacBook)..."
+              class="w-full bg-neutral-50 border border-neutral-200 rounded-xl pl-10 pr-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900 transition"
+            >
+          </div>
+          <button 
+            type="submit" 
+            id="submitBtn"
+            class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white text-sm font-medium rounded-xl transition flex items-center gap-1.5 shrink-0"
+          >
+            <span>Найти</span>
+          </button>
+        </div>
+
+        <!-- Недавние запросы -->
+        <div id="historyBox" class="hidden flex-wrap items-center gap-1.5 text-xs">
+          <span class="text-neutral-400">Недавно:</span>
+          <span id="historyChips" class="flex flex-wrap gap-1.5"></span>
+          <button type="button" onclick="clearHistory()" class="text-neutral-400 hover:text-neutral-700 underline underline-offset-2">очистить</button>
+        </div>
+
+        <!-- Кнопка раскрытия параметров (по умолчанию скрыты) -->
+        <div class="pt-1">
+          <button 
+            type="button" 
+            onclick="toggleFilters()" 
+            class="flex items-center gap-1.5 text-xs font-medium text-neutral-500 hover:text-neutral-900 transition"
+          >
+            <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5"></i>
+            <span>Параметры поиска</span>
+            <i id="filtersArrow" data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200"></i>
+          </button>
+
+          <!-- Панель фильтров: компактная сетка -->
+          <div id="filtersPanel" class="hidden pt-4 mt-3 border-t border-neutral-100 space-y-4">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              
+              <!-- Колонка 1: Город и Радиус -->
+              <div class="space-y-3">
+                <div>
+                  <label class="block text-xs text-neutral-500 mb-1">Город</label>
+                  <input type="text" id="city" list="cityList" value="Москва" autocomplete="off" placeholder="Любой город, например Тверь"
+                    class="w-full bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-1.5 text-xs text-neutral-800 focus:outline-none focus:border-neutral-900">
+                  <datalist id="cityList">
+                    <option value="Москва"><option value="Санкт-Петербург"><option value="Екатеринбург"><option value="Новосибирск">
+                    <option value="Казань"><option value="Нижний Новгород"><option value="Самара"><option value="Челябинск">
+                    <option value="Омск"><option value="Ростов-на-Дону"><option value="Уфа"><option value="Красноярск">
+                    <option value="Воронеж"><option value="Пермь"><option value="Волгоград"><option value="Краснодар">
+                    <option value="Саратов"><option value="Тюмень"><option value="Иркутск"><option value="Хабаровск">
+                    <option value="Владивосток"><option value="Калининград"><option value="Сочи"><option value="Вся Россия">
+                  </datalist>
+                </div>
+                <div>
+                  <label class="block text-xs text-neutral-500 mb-1">Страниц выдачи Авито (~50 объявлений на стр.)</label>
+                  <select id="pages" class="w-full bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-1.5 text-xs text-neutral-800 focus:outline-none focus:border-neutral-900">
+                    <option value="1">1 — быстро</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3 — рекомендуется</option>
+                    <option value="4">4</option>
+                    <option value="5">5 — дольше и выше риск блокировки</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-neutral-500 mb-1">Сверять цену на странице объявления</label>
+                  <select id="verify_top" class="w-full bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-1.5 text-xs text-neutral-800 focus:outline-none focus:border-neutral-900">
+                    <option value="0">Не сверять</option>
+                    <option value="6">Топ-6</option>
+                    <option value="12" selected>Топ-12</option>
+                    <option value="20">Топ-20</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Колонка 2: Цена и Продавцы -->
+              <div class="space-y-3">
+                <div>
+                  <label class="block text-xs text-neutral-500 mb-1">Цена, ₽</label>
+                  <div class="flex gap-2">
+                    <input type="number" id="price_from" placeholder="От" class="w-1/2 bg-neutral-50 border border-neutral-200 rounded-lg px-2.5 py-1.5 text-xs text-neutral-800 focus:outline-none focus:border-neutral-900">
+                    <input type="number" id="price_to" placeholder="До" class="w-1/2 bg-neutral-50 border border-neutral-200 rounded-lg px-2.5 py-1.5 text-xs text-neutral-800 focus:outline-none focus:border-neutral-900">
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-xs text-neutral-500 mb-1">Продавцы</label>
+                  <div class="inline-flex rounded-lg border border-neutral-200 p-0.5 bg-neutral-50 w-full" id="sellerGroup">
+                    <button type="button" onclick="setSeller('all')" class="seller-btn active flex-1 py-1 text-xs rounded-md text-center text-neutral-600">Все</button>
+                    <button type="button" onclick="setSeller('private')" class="seller-btn flex-1 py-1 text-xs rounded-md text-center text-neutral-600">Частные</button>
+                    <button type="button" onclick="setSeller('company')" class="seller-btn flex-1 py-1 text-xs rounded-md text-center text-neutral-600">Компании</button>
+                  </div>
+                  <input type="hidden" id="seller_type" value="all">
+                </div>
+              </div>
+
+              <!-- Колонка 3: Ключевые слова -->
+              <div class="space-y-3">
+                <div>
+                  <label class="block text-xs text-neutral-500 mb-1">Слова в описании</label>
+                  <input type="text" id="words_in_desc" placeholder="Например: чек, пломбы" class="w-full bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-1.5 text-xs text-neutral-800 focus:outline-none focus:border-neutral-900">
+                </div>
+                <div>
+                  <label class="block text-xs text-neutral-500 mb-1">Скрыть со словами</label>
+                  <input type="text" id="exclude_words" placeholder="Например: ремонт, битый" class="w-full bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-1.5 text-xs text-neutral-800 focus:outline-none focus:border-neutral-900">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Строка быстрых чекбоксов -->
+            <div class="pt-2 flex flex-wrap gap-x-5 gap-y-2 text-xs text-neutral-600 border-t border-neutral-100">
+              <label class="flex items-center gap-1.5 cursor-pointer hover:text-neutral-900">
+                <input type="checkbox" id="delivery" class="rounded border-neutral-300 text-neutral-900 focus:ring-0">
+                <span>Только с Авито Доставкой</span>
+              </label>
+              <label class="flex items-center gap-1.5 cursor-pointer hover:text-neutral-900" title="По умолчанию свежая выдача (до 20 минут) берётся из кэша, чтобы не нагружать Авито">
+                <input type="checkbox" id="fresh" class="rounded border-neutral-300 text-neutral-900 focus:ring-0">
+                <span>Не брать из кэша</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Прогресс анализа -->
+    <div id="loader" class="hidden apple-card rounded-2xl p-5 space-y-2.5">
+      <div class="flex items-center justify-between text-xs">
+        <span id="loaderStage" class="text-neutral-700 font-medium">Запускаю…</span>
+        <span class="flex items-center gap-3">
+          <span id="loaderPct" class="text-neutral-400">0%</span>
+          <button type="button" onclick="cancelAnalysis()" class="text-neutral-500 hover:text-red-600 underline underline-offset-2">Отменить</button>
+        </span>
+      </div>
+      <div class="w-full h-1.5 bg-neutral-100 rounded-full overflow-hidden">
+        <div id="loaderBar" class="h-1.5 bg-neutral-900 rounded-full transition-all duration-500" style="width: 0%"></div>
+      </div>
+      <div class="text-[11px] text-neutral-400">Авито не любит частые запросы, поэтому между страницами делаются паузы. Обычно 1–3 минуты.</div>
+    </div>
+
+    <!-- Ошибка -->
+    <div id="errorBox" class="hidden rounded-xl border border-red-200 bg-red-50 text-red-800 text-xs p-4 leading-relaxed"></div>
+
+    <!-- Блок результатов -->
+    <div id="resultsSection" class="hidden space-y-6">
+
+      <!-- Сводка и предупреждения -->
+      <div class="space-y-2">
+        <div id="runSummary" class="text-xs text-neutral-500 px-1"></div>
+        <div id="warningsBox" class="hidden rounded-xl border border-amber-200 bg-amber-50 text-amber-800 text-xs p-3 space-y-1"></div>
+      </div>
+
+      <!-- Самые выгодные предложения -->
+      <div id="bestSection" class="space-y-3">
+        <div class="flex items-center justify-between px-1">
+          <span class="font-semibold text-sm text-neutral-900">Самые выгодные предложения</span>
+          <span class="text-[11px] text-neutral-400">относительно медианы рынка</span>
+        </div>
+        <div id="bestContainer" class="space-y-3"></div>
+      </div>
+
+      <!-- ЛИНЕЙНЫЙ ДИАПАЗОН ПРИЕМЛЕМЫХ ЦЕН (Вместо графика с дырами) -->
+      <div class="apple-card p-5 sm:p-6 rounded-2xl space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="font-semibold text-sm text-neutral-900">Диапазон приемлемых цен</span>
+          <span id="rangeSummary" class="text-xs text-neutral-500"></span>
+        </div>
+
+        <!-- Горизонтальная визуальная шкала -->
+        <div class="pt-4 pb-2 px-1">
+          <div class="relative w-full h-3 bg-neutral-100 rounded-full">
+            <!-- Зеленая полоса диапазона приемлемых цен -->
+            <div id="priceRangeBar" class="absolute h-3 bg-emerald-500/80 rounded-full transition-all duration-500" style="left: 20%; width: 50%;"></div>
+            
+            <!-- Маркер медианы рынка -->
+            <div id="medianMarker" class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-neutral-900 rounded-full border-2 border-white shadow transition-all duration-500" style="left: 45%;"></div>
+          </div>
+
+          <!-- Метки под шкалой: Низ, Приемлемая норма, Верх -->
+          <div class="flex items-center justify-between text-xs mt-3.5 pt-1">
+            <div>
+              <div class="text-[11px] text-neutral-400">Низ рынка</div>
+              <div id="scaleMin" class="font-semibold text-neutral-900 mt-0.5">0 ₽</div>
+            </div>
+            <div class="text-center">
+              <div class="text-[11px] text-emerald-700 font-medium">Приемлемый диапазон</div>
+              <div id="scaleAcceptable" class="font-semibold text-emerald-700 mt-0.5">0 – 0 ₽</div>
+            </div>
+            <div class="text-right">
+              <div class="text-[11px] text-neutral-400">Верх рынка</div>
+              <div id="scaleMax" class="font-semibold text-neutral-900 mt-0.5">0 ₽</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Список объявлений -->
+      <div class="space-y-3">
+        <div class="flex items-center justify-between text-xs text-neutral-500 px-1 gap-3">
+          <span class="font-medium uppercase tracking-wider">Все объявления</span>
+          <div class="flex items-center gap-3">
+            <select id="sortSelect" onchange="changeSort()" class="bg-white border border-neutral-200 rounded-lg px-2 py-1 text-xs text-neutral-700">
+              <option value="score">Сначала выгодные</option>
+              <option value="price_asc">Сначала дешёвые</option>
+              <option value="price_desc">Сначала дорогие</option>
+            </select>
+            <span id="listingsCount">0 лотов</span>
+          </div>
+        </div>
+        <label class="flex items-center gap-1.5 text-xs text-neutral-600 px-1 cursor-pointer">
+          <input type="checkbox" id="hideBad" checked onchange="changeSort()" class="rounded border-neutral-300 text-neutral-900 focus:ring-0">
+          <span>Скрыть аксессуары, запчасти и снятые с публикации</span>
+        </label>
+        <div id="listingsContainer" class="space-y-3">
+          <!-- Карточки наполняются через app.js -->
+        </div>
+        <div id="pager" class="flex items-center justify-center gap-1 pt-2"></div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
